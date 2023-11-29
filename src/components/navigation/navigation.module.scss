@@ -5,7 +5,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px $defaultPadding;
-    color: $black;
     overflow: hidden;
 
     .logoContainer {
@@ -44,6 +43,7 @@
     }
 
     a {
+        color: $black;
         opacity: 0.5;
         font-size: 18px;
         text-decoration: none;
