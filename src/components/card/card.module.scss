@@ -1,0 +1,41 @@
+@import '../../variables.scss';
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    border-radius: 20px;
+    box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+    padding: 30px;
+    font-size: 16px;
+    background-color: white;
+
+    .image {
+        flex: 1;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        line-height: 28px;
+        gap: 20px;
+
+        .title {
+            color: $black;
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+}
