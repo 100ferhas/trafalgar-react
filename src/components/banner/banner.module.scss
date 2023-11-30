@@ -3,7 +3,7 @@
 .banner {
     display: flex;
     flex-wrap: wrap-reverse;
-    padding: 50px $defaultPadding;
+    padding: 75px $defaultPadding;
     gap: 50px;
     align-items: center;
 
@@ -58,7 +58,7 @@
 
         img {
             width: 100%;
-            min-width: 400px;
+            min-width: 300px;
         }
     }
 }

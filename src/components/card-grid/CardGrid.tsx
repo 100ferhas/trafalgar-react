@@ -16,7 +16,7 @@ const CardGrid = (props: {
     button?: ReactElement
 }) => {
     return <>
-        <div className={styles.cardGrid}>
+        <section className={styles.cardGrid}>
             <Background background={props.background} />
 
             <div className={styles.title}>{props.title}</div>
@@ -32,7 +32,7 @@ const CardGrid = (props: {
             <div className={styles.button}>
                 {props.button}
             </div>
-        </div >
+        </section >
     </>
 }
 

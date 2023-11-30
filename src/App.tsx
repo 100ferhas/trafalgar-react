@@ -1,4 +1,3 @@
-import './App.css';
 import Banner from './components/banner/Banner';
 import Navigation from './components/navigation/Navigation';
 import illustration from './assets/images/homepage/banner-illustration.png';
@@ -10,6 +9,7 @@ import CardGrid from './components/card-grid/CardGrid';
 import serviceBg from './assets/images/homepage/our_services_bg.png';
 import servicesGridCards from './data/homepage';
 import Card from './components/card/Card';
+import Reviews from './components/reviews/Reviews';
 
 function App() {
   return (
@@ -58,7 +58,7 @@ function App() {
         button={<Button text="Download" />}
         illustration={illustration3} />
 
-
+      <Reviews />
 
     </>
   );
