@@ -2,8 +2,6 @@
 
 .card {
     flex: 1 25%;
-    // min-width: 250px;
-    // min-height: 280px;
     display: flex;
     flex-direction: column;
     text-align: start;
@@ -12,6 +10,15 @@
     overflow: hidden;
     font-size: 16px;
     background-color: white;
+    transition: transform .2s;
+
+    &:hover {
+        transform: scale(1.1);
+
+        @media (max-width: $breakpointS) {
+            transform: scale(1.05);
+        }
+    }
 
     @media (max-width: $breakpointM) {
         flex: 1 50%;
