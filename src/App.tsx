@@ -33,7 +33,7 @@ function App() {
         {
           servicesGridCards.map((item, index) => {
             return <Card
-              key={'service_card' + index}
+              key={`service_card_${index}`}
               image={item.image}
               title={item.title}
               description={item.description}

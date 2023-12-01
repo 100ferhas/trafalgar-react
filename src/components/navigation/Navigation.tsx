@@ -8,7 +8,7 @@ const Navigation = (props: {
 }) => {
 
     const renderItems = () => {
-        return props.items.map((item, index) => <a key={'navigation' + index} href='#!' className={item.active ? styles.active : ''}>{item.text}</a>)
+        return props.items.map((item, index) => <a key={`navigation_${index}`} href='#!' className={item.active ? styles.active : ''}>{item.text}</a>)
     }
 
     return <nav className={styles.nav}>
