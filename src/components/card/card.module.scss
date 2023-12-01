@@ -13,12 +13,8 @@
     font-size: 16px;
     background-color: white;
 
-    @media (max-width: $breakpointS) {
+    @media (max-width: $breakpointM) {
         flex: 1 50%;
-    }
-
-    @media (min-width: $breakpointS) and (max-width: $breakpointM) {
-        flex: 1 33%;
     }
 
     .image {

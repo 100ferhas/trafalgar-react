@@ -9,6 +9,7 @@ import CardGrid from './components/card-grid/CardGrid';
 import { servicesGridCards, articlesGridCards } from './data/homepage';
 import Card from './components/card/Card';
 import Reviews from './components/reviews/Reviews';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -73,9 +74,9 @@ function App() {
               button={item.button} />
           })
         }
-
       </CardGrid>
 
+      <Footer logoText='Trafalgar' />
     </>
   );
 }
