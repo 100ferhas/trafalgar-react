@@ -5,6 +5,9 @@ import consultation from "../assets/images/homepage/service_cards/consultation.s
 import details from "../assets/images/homepage/service_cards/details.svg";
 import emergency from "../assets/images/homepage/service_cards/emergency.svg";
 import tracking from "../assets/images/homepage/service_cards/tracking.svg";
+import image1 from '../assets/images/homepage/articles/image-1.png';
+import image2 from '../assets/images/homepage/articles/image-2.png';
+import image3 from '../assets/images/homepage/articles/image-3.png';
 
 const servicesGridCards: CardItem[] = [
     {
@@ -37,6 +40,28 @@ const servicesGridCards: CardItem[] = [
         title: 'Tracking',
         description: 'Track and save your medical history and health data '
     },
-]
+];
 
-export default servicesGridCards;
+const articlesGridCards: CardItem[] = [
+    {
+        image: image1,
+        title: 'Disease detection, check up in the laboratory',
+        description: 'In this case, the role of the health laboratory is very important to do a disease detection...',
+        button: <a href="#!">Read more</a>,
+    },
+    {
+        image: image2,
+        title: 'Herbal medicines that are safe for consumption',
+        description: 'Herbal medicine is very widely used at this time because of its very good for your health...',
+        button: <a href="#!">Read more</a>,
+    },
+    {
+        image: image3,
+        title: 'Natural care for healthy facial skin',
+        description: 'A healthy lifestyle should start from now and also for your skin health. There are some...',
+        button: <a href="#!">Read more</a>,
+    }
+];
+
+
+export { servicesGridCards, articlesGridCards };

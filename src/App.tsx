@@ -6,8 +6,7 @@ import illustration3 from './assets/images/homepage/banner-illustration-3.png';
 import Button from './components/button/Button';
 import navigationItems from './data/navigation-items';
 import CardGrid from './components/card-grid/CardGrid';
-import serviceBg from './assets/images/homepage/our_services_bg.png';
-import servicesGridCards from './data/homepage';
+import { servicesGridCards, articlesGridCards } from './data/homepage';
 import Card from './components/card/Card';
 import Reviews from './components/reviews/Reviews';
 
@@ -25,7 +24,6 @@ function App() {
         illustration={illustration} />
 
       <CardGrid
-        background={serviceBg}
         title='Our services'
         description='We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health'
         button={<Button text='Learn more' />}>
@@ -36,8 +34,7 @@ function App() {
               key={`service_card_${index}`}
               image={item.image}
               title={item.title}
-              description={item.description}
-              button={item.button} />
+              description={item.description} />
           })
         }
       </CardGrid>
@@ -59,6 +56,25 @@ function App() {
         illustration={illustration3} />
 
       <Reviews />
+
+      <CardGrid
+        type='right'
+        title='Check out our latest article'
+        button={<Button text='View all' />}>
+
+        {
+          articlesGridCards.map((item, index) => {
+            return <Card
+              key={`article_card_${index}`}
+              image={item.image}
+              imageFull={true}
+              title={item.title}
+              description={item.description}
+              button={item.button} />
+          })
+        }
+
+      </CardGrid>
 
     </>
   );

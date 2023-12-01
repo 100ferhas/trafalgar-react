@@ -19,7 +19,15 @@
         z-index: -1;
         max-width: 100%;
         margin-top: 190px;
-        left: 0;
+
+        &.left {
+            left: 0;
+        }
+
+        &.right {
+            margin-top: 120px;
+            right: 0;
+        }
 
         @media (max-width: $breakpointS) {
             margin-top: 275px;

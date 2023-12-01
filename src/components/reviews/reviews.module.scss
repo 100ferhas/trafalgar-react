@@ -59,8 +59,9 @@
             gap: 50px;
 
             .profile {
-                min-width: 300px;
+                min-width: 200px;
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
                 flex: 2;
@@ -81,7 +82,6 @@
             }
 
             .thought {
-                min-width: 300px;
                 flex: 3;
                 font-size: 19px;
                 font-weight: 400;

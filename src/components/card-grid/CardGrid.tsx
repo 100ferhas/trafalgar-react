@@ -1,23 +1,20 @@
 import styles from './card_grid.module.scss'
 import { ReactElement } from 'react';
-
-const Background = (props: { background?: string }) => {
-    return props.background ?
-        <img alt='banner-bg' className={styles.background} src={props.background} />
-        :
-        <></>
-}
+import left from '../../assets/images/card_grid/left.png';
+import right from '../../assets/images/card_grid/right.png';
 
 const CardGrid = (props: {
-    background?: string,
     title: string,
-    description: string,
+    description?: string,
     children: ReactElement[],
-    button?: ReactElement
+    button?: ReactElement,
+    type?: 'left' | 'right',
 }) => {
     return <>
         <section className={styles.cardGrid}>
-            <Background background={props.background} />
+            <img alt='banner-bg'
+                className={`${styles.background} ${!props.type || props.type === 'left' ? styles.left : styles.right}`}
+                src={!props.type || props.type === 'left' ? left : right} />
 
             <div className={styles.title}>{props.title}</div>
 
