@@ -11,15 +11,22 @@ const Reviews = () => {
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
     useEffect(() => {
-        generatorClient.getUsers({
-            include: ['name', 'picture', 'location'],
-            results: 5,
-            info: false,
-        }).then((data: UsersResponse) => {
-            setUsers(data.results);
-            setSelectedIndex(0);
-        }).catch(err => console.error(err));
+        let timer = setInterval(() => {
+            setSelectedIndex(value => !users || value === users.length - 1 ? 0 : value + 1);
+        }, 5000);
 
+        return () => clearInterval(timer);
+    }, [selectedIndex, users]);
+
+    useEffect(() => {
+        generatorClient
+            .getUsers({
+                include: ['name', 'picture', 'location'],
+                results: 5,
+                info: false,
+            })
+            .then((data: UsersResponse) => setUsers(data.results))
+            .catch(err => console.error(err));
     }, []);
 
     return <>
@@ -37,7 +44,7 @@ const Reviews = () => {
 
                 <div className={style.review} key={selectedIndex}>
                     {
-                        users?.length ?
+                        users ?
                             <>
                                 <div className={style.profile}>
                                     <img className={style.picture} alt='profile-img' src={users[selectedIndex].picture.large} />
@@ -56,7 +63,7 @@ const Reviews = () => {
                                 </div>
                             </>
                             :
-                            <></>
+                            <div className={style.empty}>No data found, please try to reload the page</div>
                     }
                 </div>
             </div >
